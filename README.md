@@ -12,8 +12,11 @@ constants for Th<sup>232</sup> (4.95E-11/year), U<sup>238</sup> (1.55E-10/year),
 
 The script solves the individual ages iteratively by entering age guesses with the known
 concentrations of *U* and *Th* until the calculated *Pb* value matches the measured *Pb*
-with an error below 0.1. It uses a bisection search approach (meaning: it is pretty fast)
-and returns the age in million years.
+with an error below 0.1. It uses a bisection search algorithm* and returns the age in million
+years.
+
+**This means that the algorithm is pretty fast. Tipically, the script get an age in less than
+15 guesses.*
 
 ## Download
 Available soon
