@@ -1,4 +1,4 @@
-# Chemical age script
+![](https://raw.githubusercontent.com/marcoalopez/chemical_age_script/master/header.png)
 
 This is a simple script written in Python to find the 'chemical' age in monazites analized in
 electron microprobes. It uses the following equation (Williams et al. 2007):
