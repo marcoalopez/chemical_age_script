@@ -23,11 +23,11 @@ Available soon
 
 ## Getting started: how to use the script
 
-First, the scripts requires Python 2.7.x or 3.4.x installed in the system. The Python
-Programming Language comes installed by default on OS X and Ubuntu. In Windows, you can
-install Python from [here](http://conda.pydata.org/miniconda.html) or [here](https://www.python.org/).
+The script requires [Python](https://www.python.org/) 2.7.x or 3.4.x installed in the system.
+The Python Programming Language comes installed by default on OS X and Ubuntu. In Windows, 
+you can install Python from [here](http://conda.pydata.org/miniconda.html).
 
-Then, you need to open and run the script. Finally write in the shell:
+First step requires to open and run the script. Second and last one requires to write in the shell:
 
 ```python
 >>> find_chemage(64586, 2519, 1626)
