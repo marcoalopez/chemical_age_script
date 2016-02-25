@@ -1,7 +1,7 @@
 #==============================================================================#
 #                                                                              #
 #    Chemical age Script                                                       #
-#    A Python script for estimating the age of monazites analized in           #
+#    A Python script for estimating the age of monazites analyzed in           #
 #    electron microprobes                                                      #
 #                                                                              #
 #    Copyright (c) 2016-present   Marco A. Lopez-Sanchez                       #
