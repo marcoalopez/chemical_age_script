@@ -19,7 +19,7 @@ years.
 15 guesses.*
 
 ## Download
-Available soon
+https://github.com/marcoalopez/chemical_age_script/releases/tag/v1.0
 
 ## Getting started: how to use the script
 
@@ -40,4 +40,4 @@ and *Pb*, respectively. Press the Enter key and that's it.
 Available soon
 
 ## License
-Available soon
+Chemical age script is licensed under the [Apache License, Version 2.0 (the "License")](http://www.apache.org/licenses/LICENSE-2.0)
