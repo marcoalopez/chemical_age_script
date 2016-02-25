@@ -1,6 +1,6 @@
 ![](https://raw.githubusercontent.com/marcoalopez/chemical_age_script/master/header.png)
 
-This is a simple script written in Python to find the 'chemical' age in monazites analized in
+This is a simple script written in Python to find the 'chemical' age in monazites analyzed in
 electron microprobes. It uses the following equation (Williams et al. 2007):
 
 ![](https://raw.githubusercontent.com/marcoalopez/chemical_age_script/master/fig_01.png)
@@ -15,7 +15,7 @@ concentrations of *U* and *Th* until the calculated *Pb* value matches the measu
 with an error below 0.1. It uses a bisection search algorithm* and returns the age in million
 years.
 
-**This means that the algorithm is pretty fast. Tipically, the script get an age in less than
+**This means that the algorithm is pretty fast. Tipically, the script gets an age in less than
 15 guesses.*
 
 ## Download
@@ -28,7 +28,7 @@ The script requires [Python](https://www.python.org/) 2.7.x or 3.4.x installed i
 The Python Programming Language comes installed by default on OS X and Ubuntu. In Windows, 
 you can install Python from [here](http://conda.pydata.org/miniconda.html).
 
-First step requires to open and run the script. Second and last one requires to write in the shell:
+The first step requires to open and run the script. The second and last one requires to write in the shell:
 
 ```python
 >>> find_chemage(64586, 2519, 1626)
@@ -40,7 +40,7 @@ and *Pb*, respectively. Press the Enter key and that's it.
 **A more detailed tutorial will be released soon**
 
 ## References
-Williams, M.L., Jercinovic, M.J., Hetherington, C.J., 2007. Microprobe Monazite Geochronology: Understanding Geologic Processes by Integrating Composition and Chronology. Annu. Rev. Earth Planet. Sci. 35, 137–175. doi:10.1146/annurev.earth.35.031306.140228
+Williams, M.L., Jercinovic, M.J., Hetherington, C.J., 2007. Microprobe Monazite Geochronology: Understanding Geologic Processes by Integrating Composition and Chronology. *Annu. Rev. Earth Planet. Sci.* 35, 137–175. doi:[10.1146/annurev.earth.35.031306.140228](http://dx.doi.org/10.1146/annurev.earth.35.031306.140228)
 
 ## License
 Chemical age script is licensed under the [Apache License, Version 2.0 (the "License")](http://www.apache.org/licenses/LICENSE-2.0)
