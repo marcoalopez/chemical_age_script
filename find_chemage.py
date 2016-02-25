@@ -1,3 +1,31 @@
+#==============================================================================#
+#                                                                              #
+#    Chemical age Script                                                       #
+#    A Python script for estimating the age of monazites analized in           #
+#    electron microprobes                                                      #
+#                                                                              #
+#    Copyright (c) 2016-present   Marco A. Lopez-Sanchez                       #
+#                                                                              #
+#    Licensed under the Apache License, Version 2.0 (the "License");           #
+#    you may not use this file except in compliance with the License.          #
+#    You may obtain a copy of the License at                                   #
+#                                                                              #
+#        http://www.apache.org/licenses/LICENSE-2.0                            #
+#                                                                              #
+#    Unless required by applicable law or agreed to in writing, software       #
+#    distributed under the License is distributed on an "AS IS" BASIS,         #
+#    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  #
+#    See the License for the specific language governing permissions and       #
+#    limitations under the License.                                            #
+#                                                                              #
+#    Version: 1.0                                                              #
+#    For details see: https://github.com/marcoalopez/chemical_age_script       #
+#                                                                              #
+#    Requirements:                                                             #
+#        Python version 2.7.x or 3.4.x or higher                               #
+#                                                                              #
+#==============================================================================#
+
 from __future__ import division, print_function # avoid python 2.x - 3.x compatibility issues
 from math import exp
 
@@ -22,8 +50,8 @@ def age_equation(t, Th, U):
 def find_chemage(Th, U, Pb):
     """Find the 'chemical' age of a monazite by applying iteratively the equation
     that relates the age and the concentrations of Th and U with the total radiogenic
-    Pb. It uses a bisection search approach to estimate the chemical age. It returns
-    the age in million years.
+    Pb. It uses a bisection search approach to estimate the age. It returns the age
+    in million years.
     
     INPUTS:
     
@@ -45,7 +73,7 @@ def find_chemage(Th, U, Pb):
             print('Something has gone wrong, check the inputs!')
             return None
         
-        Pb_estimate = age_equation(t, Th, U)
+        Pb_estimate = age_equation(t, Th, U) # make a guess
         print('guess =', round(t/1e6, 2), '  -  ', 'Pb_estimate', round(Pb_estimate, 1))
         
         if Pb_estimate < Pb:
