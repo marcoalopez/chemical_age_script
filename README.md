@@ -20,8 +20,9 @@ years.
 
 ## Download
 https://github.com/marcoalopez/chemical_age_script/releases/tag/v1.0
+https://figshare.com/articles/Chemical_age_script/2815144/1
 
-## Getting started: how to use the script
+## Getting started
 
 The script requires [Python](https://www.python.org/) 2.7.x or 3.4.x installed in the system.
 The Python Programming Language comes installed by default on OS X and Ubuntu. In Windows, 
@@ -36,8 +37,10 @@ First step requires to open and run the script. Second and last one requires to 
 where the three inputs separated by commas within the parentheses are the concentrations of *Th*, *U*
 and *Pb*, respectively. Press the Enter key and that's it.
 
+**A more detailed tutorial will be released soon**
+
 ## References
-Available soon
+Williams, M.L., Jercinovic, M.J., Hetherington, C.J., 2007. Microprobe Monazite Geochronology: Understanding Geologic Processes by Integrating Composition and Chronology. Annu. Rev. Earth Planet. Sci. 35, 137–175. doi:10.1146/annurev.earth.35.031306.140228
 
 ## License
 Chemical age script is licensed under the [Apache License, Version 2.0 (the "License")](http://www.apache.org/licenses/LICENSE-2.0)
