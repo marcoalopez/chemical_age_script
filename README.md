@@ -35,11 +35,12 @@ The first step requires to open and run the script. The second and last one requ
 ```
 
 where the three inputs separated by commas within the parentheses are the concentrations of *Th*, *U*
-and *Pb*, respectively. Press the Enter key and that's it.
+and *Pb*, respectively. Press the Enter key and that's it. See an example below.
 
 ![](https://raw.githubusercontent.com/marcoalopez/chemical_age_script/master/fig_02.png)
 *At left, running the script in the IDLE (the default Python's integrated development environment).
-At right, the Python shell window showing the results (in blue) obtained by the chemical age script.*
+At right, the Python shell window showing the results (in blue) after calling the* ```find_chemage()```
+*Python function (in black)*
 
 **A more detailed tutorial will be released soon**
 
