@@ -52,4 +52,4 @@ by Integrating Composition and Chronology. *Annu. Rev. Earth Planet. Sci.* **35*
 doi:[10.1146/annurev.earth.35.031306.140228](http://dx.doi.org/10.1146/annurev.earth.35.031306.140228)
 
 ## License
-Chemical age script is licensed under the [Apache License, Version 2.0 (the "License")](http://www.apache.org/licenses/LICENSE-2.0)
+Chemical age script is a free script available under the [Apache License, Version 2.0 (the "License")](http://www.apache.org/licenses/LICENSE-2.0)
