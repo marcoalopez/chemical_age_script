@@ -1,7 +1,8 @@
 ![](https://raw.githubusercontent.com/marcoalopez/chemical_age_script/master/header.png)
 
-This is a simple script written in Python to find the 'chemical' age in monazites analyzed in
-electron microprobes. It uses the following equation (Williams et al. 2007):
+This is a simple free open-source script written in Python to find the 'chemical' age
+in monazites analyzed in electron microprobes. It uses the following equation
+(Williams et al. 2007):
 
 ![](https://raw.githubusercontent.com/marcoalopez/chemical_age_script/master/fig_01.png)
 
@@ -25,8 +26,9 @@ https://figshare.com/articles/Chemical_age_script/2815144/1
 ## Getting started
 
 The script requires [Python](https://www.python.org/) 2.7.x or 3.4.x installed in the system.
-The Python Programming Language comes installed by default on OS X and Ubuntu. In Windows, 
-you can install Python from [here](http://conda.pydata.org/miniconda.html).
+The Python Programming Language comes installed by default on OS X and Ubuntu. In any event,
+you can install Python from [here](http://conda.pydata.org/miniconda.html) for any operating
+system.
 
 The first step requires to open and run the script. The second and last one requires to write in the shell:
 
@@ -42,7 +44,7 @@ and *Pb*, respectively. Press the Enter key and that's it. See an example below.
 At right, the Python shell window showing the results (in blue) after calling the* ```find_chemage()```
 *Python function (in black)*
 
-**A more detailed tutorial will be released soon**
+**A more detailed tutorial explaining how to use the script with tabular-like data will be released soon**
 
 ## References
 Williams, M.L., Jercinovic, M.J., Hetherington, C.J., 2007. Microprobe Monazite Geochronology: Understanding Geologic Processes
