@@ -1,20 +1,20 @@
 ﻿![](https://raw.githubusercontent.com/marcoalopez/chemical_age_script/master/header.png)
 
-This is a simple free open-source script written in Python to find the 'chemical' age<sup>1</sup>
+This is a free and open-source script written in Python to estimate the 'chemical' age or *date*<sup>1</sup>
 in monazites analyzed in electron microprobes. It uses the following equation
 (Williams et al. 2007):
 
 ![](https://raw.githubusercontent.com/marcoalopez/chemical_age_script/master/fig_01.png)
 
 that relates the age (*t*, in years) and the concentrations of *Th*, *U*, and the total radiogenic
-*Pb* in parts per million. *λ*<sup>232</sup>, *λ*<sup>238</sup>, and *λ*<sup>235</sup> are decay
+*Pb* in parts per million. *λ*<sup>232</sup>, *λ*<sup>238</sup>, and *λ*<sup>235</sup> are the decay
 constants for Th<sup>232</sup> (4.95E-11/year), U<sup>238</sup> (1.55E-10/year), and U<sup>235</sup>
 (9.85E-10/year), respectively. 
 
 The script solves the individual ages iteratively by entering age guesses with the known
 concentrations of *U* and *Th* until the calculated *Pb* value matches the measured *Pb*
-with an error below 0.1. It uses a bisection search algorithm<sup>2</sup> and returns the age in million
-years.
+with an error below 0.1. It uses a bisection search algorithm<sup>2</sup> and returns the
+age in million years.
 
 *<sup>1</sup>Since indivual ages may or may not have geological significance, Williams et al. (2006)
 refer to these as "dates" instead of "ages". They use term "age" for a result (a date or mean of dates) that
@@ -30,7 +30,7 @@ https://figshare.com/articles/Chemical_age_script/2815144/1
 ## Getting started
 
 The script requires [Python](https://www.python.org/) 2.7.x or 3.4.x installed in the system.
-The Python Programming Language comes installed by default on OS X and Ubuntu. In any event,
+The Python Programming Language comes installed by default on OS X and Ubuntu Linux. In any event,
 you can install Python from [here](http://conda.pydata.org/miniconda.html) for any operating
 system.
 
