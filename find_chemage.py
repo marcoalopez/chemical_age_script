@@ -18,7 +18,7 @@
 #    See the License for the specific language governing permissions and       #
 #    limitations under the License.                                            #
 #                                                                              #
-#    Version: 1.0                                                              #
+#    Version: 1.0.1                                                            #
 #    For details see: https://github.com/marcoalopez/chemical_age_script       #
 #                                                                              #
 #    Requirements:                                                             #
@@ -47,7 +47,7 @@ def age_equation(t, Th, U):
     """
     return (Th/232. * (exp(4.95e-11*t) - 1) * 208) + (U/238. * 0.9928 * (exp(1.55e-10*t) - 1) * 206) + (U/235. * 0.0072 * (exp(9.85e-10*t) - 1) * 207)
 
-def find_chemage(Th, U, Pb):
+def find_chemage(Th, U, Pb, r=1):
     """Find the 'chemical' age of a monazite by applying iteratively the equation
     that relates the age and the concentrations of Th and U with the total radiogenic
     Pb. It uses a bisection search approach to estimate the age. It returns the age
@@ -58,6 +58,7 @@ def find_chemage(Th, U, Pb):
     Th: the concentration of Th in parts per million
     U: the concentration of U in parts per million
     Pb: the concentration of Pb in parts per million
+    r: number of digits after the decimal point. It is set to 1 by default.
     """
 
     age_min = 0.0
@@ -85,5 +86,5 @@ def find_chemage(Th, U, Pb):
         num_guesses += 1
     
     print(' ')
-    print('age =', round(t/1e6, 1), 'Ma (after', num_guesses, 'guesses)')
-    return None
+    print('age =', round(t/1e6, r), 'Ma (after', num_guesses, 'guesses)')
+    return round(t, r)
