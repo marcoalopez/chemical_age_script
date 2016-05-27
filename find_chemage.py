@@ -75,7 +75,7 @@ def find_chemage(Th, U, Pb, r=1):
             return None
         
         Pb_estimate = age_equation(t, Th, U) # make a guess
-        print('guess =', round(t/1e6, 2), '  -  ', 'Pb_estimate', round(Pb_estimate, 1))
+        #print('guess =', round(t/1e6, 2), '  -  ', 'Pb_estimate', round(Pb_estimate, 1))
         
         if Pb_estimate < Pb:
             age_min = t
@@ -87,4 +87,4 @@ def find_chemage(Th, U, Pb, r=1):
     
     print(' ')
     print('age =', round(t/1e6, r), 'Ma (after', num_guesses, 'guesses)')
-    return round(t, r)
+    return round(t/1e6, r)
