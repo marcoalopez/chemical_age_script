@@ -19,7 +19,7 @@ Since version 1.1, it also adds an experimental implementation of the CHIME meth
 *<sup>3</sup>This method is only useful when monazites are cogenetic, Th-rich and show a range of Th contents instead of similar values.*
 
 ## Download
-https://github.com/marcoalopez/chemical_age_script/releases/
+https://github.com/marcoalopez/chemical_age_script/releases/  
 https://figshare.com/articles/Chemical_age_script/2815144/1
 
 ## Getting started
