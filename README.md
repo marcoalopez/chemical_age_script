@@ -20,7 +20,7 @@ Since version 1.1, it also adds an experimental implementation of the CHIME meth
 
 ## Download
 https://github.com/marcoalopez/chemical_age_script/releases/  
-https://figshare.com/articles/Chemical_age_script/2815144/1
+https://figshare.com/articles/Chemical_age_script/2815144
 
 ## Getting started
 
