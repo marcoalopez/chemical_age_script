@@ -30,7 +30,6 @@
 # ============================================================================ #
 
 from __future__ import division, print_function  # avoid python 2.x - 3.x compatibility issues
-from math import exp, log
 import numpy as np
 from scipy.stats import linregress
 import matplotlib.pyplot as plt
@@ -55,7 +54,7 @@ def find_chemage(Th, U, Pb, r=1, p=True):
     age_max = float(5000e6)
     num_guesses = 0
     t = (age_max + age_min) / 2.0
-    Pb_estimate = 0.0  # Initialize object
+    Pb_estimate = 0.0
 
     while abs(Pb - Pb_estimate) >= 0.1:
         #print('age_min =', round(age_min/1e6, 2), 'age_max =', round(age_max/1e6, 2))
@@ -78,6 +77,7 @@ def find_chemage(Th, U, Pb, r=1, p=True):
     if p is True:
         print(' ')
         print('age =', round(t / 1e6, r), 'Ma (after', num_guesses, 'guesses)')
+
     return round(t / 1e6, r)
 
 
@@ -123,7 +123,7 @@ def CHIME(Th, U, Pb):
 
     # Determine the least square fit to the data PbO vs ThO2 and the age
     slope_or, intercept_or, r_value_or, p_value_or, std_err_or = linregress(Th_equiv_or, Pb)
-    first_age = (1 / 4.95e-11) * log(1 + slope_or) * (232. / 207.2)
+    first_age = (1 / 4.95e-11) * np.log(1 + slope_or) * (232. / 207.2)
     #print('first_age =', round(first_age/1e6, 1))
 
     if intercept_or == 0.0:
@@ -144,7 +144,7 @@ def CHIME(Th, U, Pb):
             x = recalc_Th(Pb[i], first_age / 1e6)
             Th_equiv.append(x)
         slope, intercept, r_value, p_value, std_err = linregress(Th_equiv, Pb)
-        current_age = (1 / 4.95e-11) * log(1 + slope) * (232. / 207.2)
+        current_age = (1 / 4.95e-11) * np.log(1 + slope) * (232. / 207.2)
         print('current_age =', round(current_age / 1e6, 1))
         print('intercept =', intercept)
 
@@ -173,24 +173,25 @@ def age_equation(t, Th, U):
     U235 = 9.85e-10/year
 
     INPUTS:
-
     t: the age in years
     Th: the concentration of Th in parts per million
     U: the concentration of U in parts per million
     """
-    return (Th / 232. * (exp(4.95e-11 * t) - 1) * 208) + (U / 238. * 0.9928 * (exp(1.55e-10 * t) - 1) * 206) + (U / 235. * 0.0072 * (exp(9.85e-10 * t) - 1) * 207)
+    return (Th / 232. * (np.exp(4.95e-11 * t) - 1) * 208) +
+           (U / 238. * 0.9928 * (np.exp(1.55e-10 * t) - 1) * 206) +
+           (U / 235. * 0.0072 * (np.exp(9.85e-10 * t) - 1) * 207)
 
 
 def recalc_Th(Pb, age):
-    """Calculates the equivalent amount of ThO2 that would be required to produce the
-    measured amount of PbO if there was no UO2 in the monazite.
+    """Calculates the equivalent amount of ThO_2 that would be required to produce the
+    measured amount of PbO if there was no UO_2 in the monazite.
 
     INPUTS:
     Pb: the concentration of Pb in parts per million
     age: the age in million years
     """
 
-    return (232. / 208.) * Pb / (exp(4.95e-11 * (age * 1e6)) - 1)
+    return (232. / 208.) * Pb / (np.exp(4.95e-11 * (age * 1e6)) - 1)
 
 
 def plot_CHIME(Th_equiv, Pb, slope, intercept, current_age):
