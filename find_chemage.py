@@ -32,6 +32,7 @@
 from __future__ import division, print_function  # avoid python 2.x - 3.x compatibility issues
 import numpy as np
 from scipy.stats import linregress
+from scipy.optimize import fsolve
 import matplotlib.pyplot as plt
 import matplotlib as mpl
 mpl.style.use('ggplot')  # set plot style
@@ -79,6 +80,10 @@ def find_chemage(Th, U, Pb, r=1, p=True):
         print('age =', round(t / 1e6, r), 'Ma (after', num_guesses, 'guesses)')
 
     return round(t / 1e6, r)
+
+def solve_chemage(guess, Th, U, Pb, tol):
+    
+    return fsolve(age_equation, guess, args=(Th, U, Pb), xtol=tol)
 
 
 def find_chemage_array(Th, U, Pb, r=1):
